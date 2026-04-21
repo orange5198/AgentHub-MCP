@@ -1,0 +1,44 @@
+{
+  "name": "agenthub-mcp",
+  "version": "0.1.0",
+  "description": "A unified MCP Server to monitor and control multiple AI coding agents (Antigravity, Claude Code, Codex) from any MCP client.",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "agenthub-mcp": "build/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "tsc && node build/index.js",
+    "inspect": "tsc && npx -y @modelcontextprotocol/inspector node build/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "antigravity",
+    "claude-code",
+    "codex",
+    "agent",
+    "ai",
+    "multi-agent"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "build/",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "ws": "^8.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/ws": "^8.18.0",
+    "typescript": "^5.7.0"
+  }
+}
